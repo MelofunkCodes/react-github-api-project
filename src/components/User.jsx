@@ -24,7 +24,10 @@ class User extends React.Component {
     }
 
     fetchData(){
-        fetch(`https://api.github.com/users/${this.props.params.username}`)
+
+        var token = '9f610438e9208db100d356319321a3152beeb42f';
+
+        fetch(`https://api.github.com/users/${this.props.params.username}?access_token=${token}`)
         .then(response => response.json())
         .then(
             user => {
@@ -46,6 +49,8 @@ class User extends React.Component {
     This method is used as a mapping function. Eventually this could be factored out to its own component.
     */
     renderStat(stat) {
+
+        //changed li key from stat.name to stat.id
         return (
             <li key={stat.name} className="user-info__stat">
                 <Link to={stat.url}>
