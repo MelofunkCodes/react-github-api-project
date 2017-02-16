@@ -105,3 +105,52 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
     white-space: nowrap;
 }
+
+
+/*GithubUser Component*/
+.gh-user a {
+    display: flex;
+    padding: 0.75em;
+}
+
+.gh-user a:hover {
+    background-color: LightGrey;
+}
+.gh-user img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 1em;
+    float: left;
+}
+
+.gh-user p {
+    text-decoration: none;
+    flex: 1;
+}
+
+/* Followers */
+.followers-page ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+/* Following */
+.following-page ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+/* Repos */
+.repos-page ul{
+    list-style: none;
+    padding-left: 0px;
+}
+
+.eachRepo {
+    display: flex;
+}
+
+.star-button {
+    border: 1px solid black;
+}

@@ -20,6 +20,10 @@ class User extends React.Component {
     When `render` gets called again, `this.state.user` exists and we get the user info display instead of "LOADING..."
     */
     componentDidMount() {
+        this.fetchData();
+    }
+
+    fetchData(){
         fetch(`https://api.github.com/users/${this.props.params.username}`)
         .then(response => response.json())
         .then(
@@ -33,6 +37,11 @@ class User extends React.Component {
         );
     }
 
+    componentDidUpdate(prevProps){
+        if(prevProps.params.username !== this.props.params.username){ //if user entered different username, call fetchData again
+            this.fetchData();
+        }
+    }
     /*
     This method is used as a mapping function. Eventually this could be factored out to its own component.
     */
@@ -89,6 +98,8 @@ class User extends React.Component {
                         {stats.map(this.renderStat)}
                     </ul>
                 </div>
+                <hr/>
+                {this.props.children}
             </div>
         );
     }
