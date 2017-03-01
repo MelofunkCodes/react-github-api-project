@@ -22,13 +22,11 @@ class Repos extends React.Component {
 			return;
 		}
 
-		var token = 'c69';
-
 		this.setState({
 			loading: true
 		});
 
-		fetch(`https://api.github.com/users/${this.props.params.username}/repos?access_token=${token}&page=${this.state.page}&per_page=50`)
+		fetch(`https://api.github.com/users/${this.props.params.username}/repos?page=${this.state.page}&per_page=50`)
 		.then(response=>response.json())
 		.then(function(data){
 			this.setState({

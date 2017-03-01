@@ -28,14 +28,12 @@ class Followers extends React.Component {
 			return;
 		}
 
-		var token = 'c69';
-
 		this.setState({
 			loading: true
 		});
 
 		//note: the endOfTheLine property of setState, when no data or response is retrieved, it will evaluate to true, then upon next call to fetchFollowers, fetch will not be called.
-		fetch(`https://api.github.com/users/${this.props.params.username}/followers?access_token=${token}&page=${this.state.page}&per_page=50`)
+		fetch(`https://api.github.com/users/${this.props.params.username}/followers?page=${this.state.page}&per_page=50`)
 		.then(response=>response.json())
 		.then(function(data){
 			this.setState({
