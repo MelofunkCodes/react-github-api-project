@@ -24,7 +24,6 @@ class User extends React.Component {
     }
 
     fetchData(){
-        //yo
 
         fetch(`https://api.github.com/users/${this.props.params.username}`)
         .then(response => response.json())
