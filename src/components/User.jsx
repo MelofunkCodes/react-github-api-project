@@ -25,7 +25,7 @@ class User extends React.Component {
 
     fetchData(){
 
-        var token = '9f610438e9208db100d356319321a3152beeb42f';
+        var token = 'c69';
 
         fetch(`https://api.github.com/users/${this.props.params.username}?access_token=${token}`)
         .then(response => response.json())

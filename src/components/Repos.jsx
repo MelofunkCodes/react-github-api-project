@@ -22,7 +22,7 @@ class Repos extends React.Component {
 			return;
 		}
 
-		var token = '9f610438e9208db100d356319321a3152beeb42f';
+		var token = 'c69';
 
 		this.setState({
 			loading: true
