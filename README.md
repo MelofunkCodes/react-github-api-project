@@ -1,4 +1,4 @@
-Website demo can be found at: https://melofunkcodes.github.io/react-githu-api-project
+Website demo can be found at: https://melofunkcodes.github.io/react-github-api-project
 
 # React + GitHub API project
 
