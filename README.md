@@ -1,3 +1,5 @@
+Website demo can be found at: https://melofunkcodes.github.io/react-githu-api-project
+
 # React + GitHub API project
 
 In this project, we're going to take a small, existing React application and add new features to it.
